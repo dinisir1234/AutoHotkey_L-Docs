@@ -229,3 +229,25 @@
 </body>
 
 </html>
+~*Alt:: 
+MouseGetPos, X, Y 
+Sleep, 3 
+While GetKeyState("Alt", "P") { 
+MouseMove, -0, 0, 10, R 
+DllCall("SetCursorPos", "int", 44, "int", 85) 
+} 
+Send, {LButton} 
+Sleep, 50 
+ 
+MouseMove, X, Y, 0 
+Ctrl::SetTimer, use, 1 
+Shift::SetTimer, use, off 
+ 
+use: 
+send, {r}
+Авто подбор
+Alt::SetTimer,use,1 
+Shift::SetTimer,use,off 
+use: 
+send,{R} 
+Sleep,3
